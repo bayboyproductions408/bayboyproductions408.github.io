@@ -1,0 +1,277 @@
+<title>Flappy Birdies Deluxe Privacy</title>
+<style>
+  :root {
+    --bg: #f5f8fa;
+    --surface: #ffffff;
+    --surface-2: #eef3f6;
+    --text: #1b2430;
+    --text-muted: #5b6472;
+    --accent: #c98a1c;
+    --accent-soft: #f7e6c4;
+    --border: #e2e7ed;
+    --sky: #6fb7d1;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --bg: #10141a;
+      --surface: #171d25;
+      --surface-2: #1c232c;
+      --text: #e8ecf1;
+      --text-muted: #97a2af;
+      --accent: #f0bb4e;
+      --accent-soft: #3a2f16;
+      --border: #29323d;
+      --sky: #4a90ab;
+    }
+  }
+  :root[data-theme="dark"] {
+    --bg: #10141a;
+    --surface: #171d25;
+    --surface-2: #1c232c;
+    --text: #e8ecf1;
+    --text-muted: #97a2af;
+    --accent: #f0bb4e;
+    --accent-soft: #3a2f16;
+    --border: #29323d;
+    --sky: #4a90ab;
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    padding: 64px 24px 96px;
+  }
+
+  .page {
+    max-width: 660px;
+    margin: 0 auto;
+  }
+
+  header.masthead {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 40px;
+  }
+
+  .mark {
+    flex: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--sky);
+    position: relative;
+    box-shadow: inset -4px -4px 0 rgba(0,0,0,0.08);
+  }
+  .mark::after {
+    content: "";
+    position: absolute;
+    right: 6px;
+    top: 16px;
+    width: 12px;
+    height: 6px;
+    background: var(--accent);
+    border-radius: 1px 4px 4px 1px;
+  }
+
+  .masthead-text .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+    font-size: 12px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0 0 2px;
+  }
+  .masthead-text h1 {
+    font-family: "Sora", system-ui, sans-serif;
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    letter-spacing: -0.01em;
+  }
+
+  h2 {
+    font-family: "Sora", system-ui, sans-serif;
+    font-size: 19px;
+    font-weight: 600;
+    letter-spacing: -0.01em;
+    margin: 40px 0 14px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-wrap: balance;
+  }
+  h2::before {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: var(--accent);
+    border-radius: 2px;
+    flex: none;
+  }
+
+  p { margin: 0 0 14px; color: var(--text); }
+  p.muted { color: var(--text-muted); }
+
+  .meta {
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+    font-size: 13px;
+    color: var(--text-muted);
+    margin: -28px 0 36px;
+  }
+
+  .summary-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin: 0 0 8px;
+  }
+  .summary-card p:last-child { margin-bottom: 0; }
+  .summary-card .label {
+    font-family: "Sora", system-ui, sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin: 0 0 10px;
+  }
+
+  ul { margin: 0 0 14px; padding-left: 22px; }
+  li { margin-bottom: 7px; }
+  li::marker { color: var(--accent); }
+
+  .not-collected {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    gap: 8px;
+    margin: 0 0 14px;
+  }
+  .not-collected li {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+    font-family: "Sora", system-ui, sans-serif;
+    font-size: 15px;
+    background: var(--surface-2);
+    border-radius: 8px;
+    padding: 10px 14px;
+  }
+  .not-collected li::before {
+    content: "—";
+    color: var(--accent);
+    flex: none;
+  }
+
+  .contact-box {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-top: 8px;
+  }
+  .contact-box a {
+    color: var(--accent);
+    text-decoration: none;
+    font-family: "JetBrains Mono", ui-monospace, "SF Mono", monospace;
+    font-size: 15px;
+  }
+  .contact-box a:hover, .contact-box a:focus-visible { text-decoration: underline; }
+  .placeholder-flag {
+    display: inline-block;
+    margin-top: 8px;
+    font-family: "Sora", system-ui, sans-serif;
+    font-size: 12px;
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 3px 9px;
+    border-radius: 999px;
+  }
+
+  footer {
+    margin-top: 56px;
+    padding-top: 24px;
+    border-top: 1px solid var(--border);
+    font-family: "Sora", system-ui, sans-serif;
+    font-size: 13px;
+    color: var(--text-muted);
+  }
+
+  a { color: var(--accent); }
+  :focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<div class="page">
+  <header class="masthead">
+    <div class="mark" aria-hidden="true"></div>
+    <div class="masthead-text">
+      <p class="eyebrow">Bay Boy Productions</p>
+      <h1>Flappy Birdies Deluxe — Privacy Policy</h1>
+    </div>
+  </header>
+
+  <p class="meta">Last updated August 22, 2026</p>
+
+  <div class="summary-card">
+    <p class="label">At a glance</p>
+    <p>Flappy Birdies Deluxe collects nothing of its own. Two things involve outside services, both described below: signing in to Apple Game Center or Google Play Games for the in-app leaderboards sends your score and coin totals to Apple/Google, and the app shows ads served by Google AdMob (non-personalized — not based on tracking you across other apps) to keep the game free. No in-app purchases. Your save file lives only on your own device.</p>
+  </div>
+
+  <h2>What the app stores</h2>
+  <p>Your best score, coin balance, and unlocked or equipped birds and accessories are saved <strong>only on your device</strong>, in a local save file. This data never leaves your device — it isn't uploaded anywhere, isn't visible to us, and isn't shared with anyone.</p>
+  <p>The app also generates a random local identifier the first time you launch it. This identifier stays on your device, isn't linked to your name, email, or any other personal information, and isn't transmitted anywhere. It exists only so a future version of the app could offer cross-device save syncing — that feature doesn't exist yet.</p>
+
+  <h2>Leaderboards (Game Center / Google Play Games)</h2>
+  <p>The app has an optional leaderboard, showing the highest scores and coin totals among players who choose to sign in. If you sign in:</p>
+  <ul>
+    <li>Your best score and total coins collected are sent to Apple Game Center (iOS) or Google Play Games Services (Android) so they can appear on the leaderboard.</li>
+    <li>Sign-in itself is handled entirely by Apple or Google's own systems — this app never sees your name, email, password, or any other account detail. We only ever send a score/coin number, tagged under whatever player alias Apple or Google already assigns you.</li>
+    <li>Signing in is entirely optional. Skip it, or stay signed out of Game Center / Google Play Games at the OS level, and the leaderboard button stays unavailable while the rest of the game works exactly the same.</li>
+  </ul>
+  <p class="muted">See <a href="https://support.apple.com/en-us/HT204759">Apple's Game Center privacy information</a> or <a href="https://policies.google.com/privacy">Google's privacy policy</a> for how they handle the data once it reaches them.</p>
+
+  <h2>Advertising (Google AdMob)</h2>
+  <p>The app shows ads — between rounds, and optionally to continue a run — served by Google AdMob, so the game can stay free with no purchases required. To serve and measure those ads, Google's AdMob SDK automatically processes some technical data: things like device type, approximate location derived from IP address, and general app-usage signals related to the ad itself.</p>
+  <ul>
+    <li>Ads are configured as <strong>non-personalized</strong> — not based on your interests, browsing history, or activity in other apps. The app doesn't use Apple's ad-tracking permission (App Tracking Transparency) because it doesn't do the kind of cross-app tracking that requires it.</li>
+    <li>We never see or handle this data ourselves — it's collected and processed entirely by Google.</li>
+    <li>Ads aren't shown to declared-under-13 users in territories with extra child-directed ad rules, per Google's own enforcement of that setting on our AdMob account.</li>
+  </ul>
+  <p class="muted">See <a href="https://policies.google.com/technologies/ads">Google's Ads Privacy &amp; Terms</a> and <a href="https://support.google.com/admob/answer/6128543">how AdMob handles data</a> for details.</p>
+
+  <h2>What the app doesn't do</h2>
+  <ul class="not-collected">
+    <li>No account system of our own — the only sign-in involved is Apple Game Center / Google Play Games, both optional and both handled entirely by Apple/Google</li>
+    <li>No collection of your name, email, or contacts</li>
+    <li>No analytics or crash reporting beyond what's described above for ads</li>
+    <li>No in-app purchases — every coin is earned by playing</li>
+    <li>No access to your camera, microphone, photos, or contacts</li>
+    <li>No data shared with any other third party beyond the Game Center / Play Games leaderboard submissions and AdMob ad-serving described above</li>
+  </ul>
+
+  <h2>Children's privacy</h2>
+  <p>This app isn't directed at children, and doesn't knowingly collect personal data from anyone, including children. Ads are served through Google AdMob configured for non-personalized, general-audience delivery — see the Advertising section above for what that SDK processes to serve and measure ads.</p>
+
+  <h2>Changes to this policy</h2>
+  <p>If a future version of this app adds features that change what data is collected or transmitted — for example, cross-device cloud save through a sign-in system, or an in-app purchase — this policy will be updated first, before that feature ships, to describe exactly what changes.</p>
+
+  <h2>Contact</h2>
+  <div class="contact-box">
+    <p class="muted" style="margin-bottom: 10px;">Questions about this policy or the app can be sent to:</p>
+    <a href="mailto:bayboyproductions408@gmail.com">bayboyproductions408@gmail.com</a>
+  </div>
+
+  <footer>
+    Flappy Birdies Deluxe is developed by Bay Boy Productions.
+  </footer>
+</div>
