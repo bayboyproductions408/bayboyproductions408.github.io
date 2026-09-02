@@ -1,0 +1,283 @@
+<title>Golf Putt Putt Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=IBM+Plex+Mono:wght@400;500&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+  /* Light palette is the base. Neutrals carry a slight green bias so they
+     sit with the accent instead of reading as stock grey. */
+  :root {
+    --paper:      #f7f9f5;
+    --surface:    #ffffff;
+    --ink:        #152018;
+    --ink-soft:   #566159;
+    --rule:       #dfe6db;
+    --fairway:    #2e7d4f;
+    --fairway-dim:#e7f1ea;
+    --flag:       #c4503c;
+    --shadow:     0 1px 2px rgba(21, 32, 24, .05), 0 8px 24px rgba(21, 32, 24, .05);
+  }
+  /* System-dark (no data-theme stamp) - but an explicit light choice wins. */
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper:      #10160f;
+      --surface:    #171f18;
+      --ink:        #e6ece4;
+      --ink-soft:   #9aa89c;
+      --rule:       #27332a;
+      --fairway:    #6cc48d;
+      --fairway-dim:#1b2a20;
+      --flag:       #e0705c;
+      --shadow:     0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .28);
+    }
+  }
+  /* Explicit dark choice wins over a light OS. */
+  :root[data-theme="dark"] {
+    --paper:      #10160f;
+    --surface:    #171f18;
+    --ink:        #e6ece4;
+    --ink-soft:   #9aa89c;
+    --rule:       #27332a;
+    --fairway:    #6cc48d;
+    --fairway-dim:#1b2a20;
+    --flag:       #e0705c;
+    --shadow:     0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .28);
+  }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.62;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .page {
+    max-width: 40rem;              /* ~65 characters of this body face */
+    margin: 0 auto;
+    padding: clamp(2.5rem, 7vw, 5rem) clamp(1.25rem, 5vw, 2rem) 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2.75rem;
+  }
+
+  /* ---- masthead ---- */
+  header { display: flex; flex-direction: column; gap: .85rem; }
+
+  .eyebrow {
+    font-family: "IBM Plex Mono", ui-monospace, "SFMono-Regular", monospace;
+    font-size: .72rem;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    display: flex;
+    align-items: center;
+    gap: .55rem;
+  }
+  .pin {
+    width: .62rem; height: .62rem;
+    background: var(--flag);
+    /* a pennant, not a bullet */
+    clip-path: polygon(0 0, 100% 22%, 0 44%, 0 100%, 14% 100%, 14% 0);
+    flex: none;
+  }
+
+  h1 {
+    font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: clamp(2rem, 6vw, 2.7rem);
+    line-height: 1.08;
+    letter-spacing: -.02em;
+    text-wrap: balance;
+    margin: 0;
+  }
+  .standfirst { color: var(--ink-soft); margin: 0; max-width: 34rem; }
+  .updated {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .8rem;
+    color: var(--ink-soft);
+    font-variant-numeric: tabular-nums;
+  }
+
+  /* ---- the summary box: the three facts most people open this to find ---- */
+  .glance {
+    background: var(--surface);
+    border: 1px solid var(--rule);
+    border-radius: 10px;
+    box-shadow: var(--shadow);
+    padding: 1.4rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .glance h2 {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .72rem;
+    font-weight: 500;
+    letter-spacing: .14em;
+    text-transform: uppercase;
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .glance dl { margin: 0; display: flex; flex-direction: column; gap: .8rem; }
+  .glance div { display: grid; grid-template-columns: 5.5rem 1fr; gap: .9rem; align-items: baseline; }
+  .glance dt {
+    font-family: "Bricolage Grotesque", Arial, sans-serif;
+    font-weight: 700;
+    font-size: .95rem;
+    color: var(--fairway);
+  }
+  .glance dd { margin: 0; font-size: .97rem; color: var(--ink); }
+  @media (max-width: 26rem) {
+    .glance div { grid-template-columns: 1fr; gap: .15rem; }
+  }
+
+  /* ---- body sections ---- */
+  main { display: flex; flex-direction: column; gap: 2.4rem; }
+  section { display: flex; flex-direction: column; gap: .9rem; }
+  section + section { border-top: 1px solid var(--rule); padding-top: 2.4rem; }
+
+  h2.rubric {
+    font-family: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+    font-weight: 700;
+    font-size: 1.28rem;
+    letter-spacing: -.012em;
+    line-height: 1.2;
+    text-wrap: balance;
+    margin: 0;
+  }
+  p { margin: 0; }
+  ul { margin: 0; padding-left: 1.15rem; display: flex; flex-direction: column; gap: .4rem; }
+  li::marker { color: var(--fairway); }
+  strong { font-weight: 600; }
+
+  .lede {
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--fairway);
+  }
+
+  a {
+    color: var(--fairway);
+    text-decoration-thickness: 1px;
+    text-underline-offset: .18em;
+    word-break: break-word;
+  }
+  a:focus-visible {
+    outline: 2px solid var(--fairway);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---- contact ---- */
+  .contact {
+    background: var(--fairway-dim);
+    border-radius: 10px;
+    padding: 1.3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+  }
+  .contact a {
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: 1rem;
+  }
+
+  footer {
+    color: var(--ink-soft);
+    font-family: "IBM Plex Mono", ui-monospace, monospace;
+    font-size: .74rem;
+    letter-spacing: .04em;
+    border-top: 1px solid var(--rule);
+    padding-top: 1.4rem;
+  }
+</style>
+
+<div class="page">
+  <header>
+    <div class="eyebrow"><span class="pin" aria-hidden="true"></span>Golf Putt Putt &middot; Bay Boy Productions</div>
+    <h1>Privacy Policy</h1>
+    <p class="standfirst">This policy explains what the app does and does not collect. It is short, because the app does very little.</p>
+    <div class="updated">Last updated 24 August 2026</div>
+  </header>
+
+  <div class="glance">
+    <h2>The short version</h2>
+    <dl>
+      <div>
+        <dt>Accounts</dt>
+        <dd>There are none. No login, no sign-up, no email address.</dd>
+      </div>
+      <div>
+        <dt>Your data</dt>
+        <dd>We collect nothing. Your progress is saved on your device only.</dd>
+      </div>
+      <div>
+        <dt>Ads</dt>
+        <dd>Served by Google AdMob, and requested as non-personalized.</dd>
+      </div>
+    </dl>
+  </div>
+
+  <main>
+    <section>
+      <h2 class="rubric">What we collect ourselves</h2>
+      <p class="lede">Nothing.</p>
+      <p>Golf Putt Putt has no account, no login, no sign-up form and no analytics. We do not collect, transmit or store your name, email address, phone number, contacts, photos, location, or any other personal information.</p>
+    </section>
+
+    <section>
+      <h2 class="rubric">What is stored on your device</h2>
+      <p>Your game progress is saved locally on your device only:</p>
+      <ul>
+        <li>which holes you have completed, and your best stroke count on each</li>
+        <li>coins, mulligans, and which ball skins you have unlocked</li>
+        <li>your sound on/off setting</li>
+        <li>a randomly generated local ID, used only to name your save file</li>
+      </ul>
+      <p>This never leaves your device, and it is not backed up to us. Deleting the app deletes it.</p>
+    </section>
+
+    <section>
+      <h2 class="rubric">Advertising</h2>
+      <p>Golf Putt Putt shows ads through <strong>Google AdMob</strong>. AdMob is operated by Google and is a separate company from us.</p>
+      <p>The app is configured to request <strong>non-personalized ads</strong>. That means ads are selected based on general context rather than a profile of you. Google may still process limited data &mdash; such as your device&rsquo;s IP address and general device information &mdash; in order to serve an ad, prevent fraud, and count impressions. We never see this data and never receive it.</p>
+      <p>Google&rsquo;s own policy explains what they do with it: <a href="https://policies.google.com/technologies/ads">policies.google.com/technologies/ads</a></p>
+      <p>The app does <strong>not</strong> use Apple&rsquo;s App Tracking Transparency prompt, because it does not track you across other companies&rsquo; apps or websites.</p>
+    </section>
+
+    <section>
+      <h2 class="rubric">Children</h2>
+      <p>Golf Putt Putt is rated 4+ / Everyone and is suitable for all ages. It is a general-audience game, not a child-directed one under COPPA. Ad content is restricted to a <strong>G</strong> content rating.</p>
+      <p>We do not knowingly collect personal information from anyone, of any age, because we do not collect personal information at all.</p>
+    </section>
+
+    <section>
+      <h2 class="rubric">In-app purchases</h2>
+      <p>There are none in version 1.0. Coins are earned by playing and cannot be bought with real money.</p>
+    </section>
+
+    <section>
+      <h2 class="rubric">Third parties</h2>
+      <p>The only third-party service in the app is Google AdMob, described above. On devices where Game Center (iOS) or Google Play Games (Android) is available, leaderboard scores you submit are handled by Apple or Google under their own privacy policies. Leaderboards are optional &mdash; the game is fully playable without signing in.</p>
+    </section>
+
+    <section>
+      <h2 class="rubric">Changes</h2>
+      <p>If this policy changes, the &ldquo;last updated&rdquo; date above changes with it, and the updated policy will be published at this same address before the change takes effect.</p>
+    </section>
+
+    <section id="support">
+      <h2 class="rubric">Support</h2>
+      <p>One address handles everything &mdash; questions about this policy, bug reports, a hole that will not complete, lost progress, or anything else about the game. Emails are usually answered within two business days.</p>
+      <p>If you are reporting a problem, it helps to include your device model, your iOS version, and the number of the hole you were playing.</p>
+      <div class="contact">
+        <p>Support and privacy enquiries:</p>
+        <a href="mailto:bayboyproductions408@gmail.com">bayboyproductions408@gmail.com</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Golf Putt Putt is published by Bay Boy Productions.</footer>
+</div>
