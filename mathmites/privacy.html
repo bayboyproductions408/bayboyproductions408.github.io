@@ -1,0 +1,250 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Mathmites collects no personal information. No account, no analytics, no advertising, no network access.">
+<title>Mathmites Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+  :root {
+    --ground: #f6f7fb;
+    --surface: #ffffff;
+    --ink: #151a2b;
+    --ink-soft: #4a5268;
+    --ink-faint: #78809a;
+    --rule: #e2e5ee;
+    --mint: #1c8b62;
+    --mint-soft: #eaf6f1;
+    --amber: #a76a12;
+    --amber-soft: #fdf4e4;
+    --shadow: 0 1px 2px rgba(21, 26, 43, .05), 0 8px 28px rgba(21, 26, 43, .06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0b0e1a;
+      --surface: #141a2e;
+      --ink: #edf0f8;
+      --ink-soft: #a8b0c6;
+      --ink-faint: #7d859d;
+      --rule: #242c46;
+      --mint: #54d6a0;
+      --mint-soft: #10241d;
+      --amber: #ffd166;
+      --amber-soft: #241d0f;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 28px rgba(0, 0, 0, .35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0b0e1a;
+    --surface: #141a2e;
+    --ink: #edf0f8;
+    --ink-soft: #a8b0c6;
+    --ink-faint: #7d859d;
+    --rule: #242c46;
+    --mint: #54d6a0;
+    --mint-soft: #10241d;
+    --amber: #ffd166;
+    --amber-soft: #241d0f;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 28px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    padding: clamp(28px, 6vw, 72px) clamp(20px, 5vw, 32px) 80px;
+  }
+
+  .wrap { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 34px; }
+
+  header { display: flex; flex-direction: column; gap: 14px; }
+
+  .eyebrow {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--mint);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  h1 {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: clamp(34px, 6vw, 46px);
+    font-weight: 700; line-height: 1.08;
+    letter-spacing: -.02em;
+    margin: 0; text-wrap: balance;
+  }
+
+  .updated {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 14px; color: var(--ink-faint); margin: 0;
+  }
+
+  /* The whole policy in one sentence, up top, because that is the only part
+     most parents will read. */
+  .lede {
+    background: var(--mint-soft);
+    border: 1px solid color-mix(in srgb, var(--mint) 26%, transparent);
+    border-radius: 14px;
+    padding: 22px 24px;
+    font-size: 19px; line-height: 1.55;
+    margin: 0;
+  }
+  .lede strong { font-weight: 600; color: var(--mint); }
+
+  h2 {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 21px; font-weight: 600;
+    letter-spacing: -.01em;
+    margin: 0 0 10px; color: var(--ink);
+  }
+
+  section { display: flex; flex-direction: column; }
+  section + section { border-top: 1px solid var(--rule); padding-top: 30px; }
+
+  p { margin: 0 0 14px; color: var(--ink-soft); }
+  p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  /* Encodes the actual compliance surface: the list of things that are
+     absent IS the policy, so it gets to be a real table rather than prose. */
+  .absent { display: flex; flex-direction: column; gap: 1px; background: var(--rule); border-radius: 12px; overflow: hidden; border: 1px solid var(--rule); margin-top: 4px; }
+  .absent-row { background: var(--surface); padding: 13px 18px; display: flex; align-items: baseline; gap: 14px; }
+  .absent-row dt { font-family: "Outfit", system-ui, sans-serif; font-weight: 500; font-size: 15px; color: var(--ink); flex: 1; margin: 0; }
+  .absent-row dd { margin: 0; font-family: "Outfit", system-ui, sans-serif; font-size: 12px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; color: var(--mint); white-space: nowrap; }
+
+  .note {
+    background: var(--amber-soft);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px; margin-top: 6px;
+  }
+  .note p { color: var(--ink-soft); margin: 0; font-size: 16px; }
+
+  a { color: var(--mint); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 3px; }
+
+  footer {
+    border-top: 1px solid var(--rule); padding-top: 26px;
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 14px; color: var(--ink-faint);
+    display: flex; flex-direction: column; gap: 5px;
+  }
+  footer .who { color: var(--ink); font-weight: 600; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Mathmites &middot; Math Games for Kids</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last updated 29 August 2026</p>
+  </header>
+
+  <p class="lede">
+    Mathmites collects <strong>nothing</strong>. There is no account, no sign-up, no
+    analytics, no advertising, and no internet connection. Everything the app
+    learns about your child stays on your device, and we never see it.
+  </p>
+
+  <section>
+    <h2>What we collect</h2>
+    <p>
+      Nothing. Not a name, not an email address, not a device identifier, not an
+      advertising ID, not location, not contacts, not photos, not usage analytics.
+    </p>
+    <p>
+      The app asks how old the player is on first launch. That answer is stored on
+      the device and used to pick a starting difficulty. It is never transmitted
+      anywhere, and it is not attached to any identifier.
+    </p>
+  </section>
+
+  <section>
+    <h2>What is stored on your device</h2>
+    <p>
+      Your child's learning progress: which math skills they have practised, how many
+      questions they answered, which Mathmites they have collected, and their
+      settings. This lives in the app's own storage on the device.
+    </p>
+    <p>
+      It is not backed up to our servers, because <strong>we do not have
+      servers</strong>. Deleting the app deletes all of it, permanently.
+    </p>
+  </section>
+
+  <section>
+    <h2>Children's privacy</h2>
+    <p>
+      Mathmites is designed for children roughly four to nine years old, and is built
+      to comply with the Children's Online Privacy Protection Act (COPPA) and the
+      Google Play Families policy.
+    </p>
+    <p>
+      Because the app collects no personal information from anyone, there is nothing
+      for a parent to request, review, or ask us to delete. We could not identify a
+      particular child's data if we wanted to.
+    </p>
+
+    <dl class="absent">
+      <div class="absent-row"><dt>Advertising, personalized or otherwise</dt><dd>None</dd></div>
+      <div class="absent-row"><dt>In-app purchases</dt><dd>None</dd></div>
+      <div class="absent-row"><dt>Third-party analytics or tracking SDKs</dt><dd>None</dd></div>
+      <div class="absent-row"><dt>Chat, social features, user-generated content</dt><dd>None</dd></div>
+      <div class="absent-row"><dt>Links out to websites, apps, or stores</dt><dd>None</dd></div>
+      <div class="absent-row"><dt>Accounts or sign-in</dt><dd>None</dd></div>
+    </dl>
+  </section>
+
+  <section>
+    <h2>Permissions</h2>
+    <p>
+      Mathmites requests no device permissions. It does not use the camera,
+      microphone, location, contacts, photo library, or Bluetooth, and it does not
+      need network access to work.
+    </p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>
+      If a future version adds anything that changes this &mdash; optional advertising
+      or a paid subscription, for example &mdash; this policy will be updated before
+      that version ships.
+    </p>
+    <div class="note">
+      <p>
+        Any such change will be described here plainly rather than buried, and the
+        app's store listing will say so too.
+      </p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy or the app:
+      <a href="mailto:bayboyproductions408@gmail.com">bayboyproductions408@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <span class="who">Bay Boy Productions</span>
+    <span>Mathmites: Math Games for Kids &middot; iOS</span>
+  </footer>
+</div>
+</body>
+</html>
