@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Support for Eat Fast Move — questions, feedback, or something not working right.">
+<title>Eat Fast Move Support</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+  :root {
+    --ground: #f6f7fb;
+    --surface: #ffffff;
+    --ink: #151a2b;
+    --ink-soft: #4a5268;
+    --ink-faint: #78809a;
+    --rule: #e2e5ee;
+    --mint: #1c8b62;
+    --mint-soft: #eaf6f1;
+    --shadow: 0 1px 2px rgba(21, 26, 43, .05), 0 8px 28px rgba(21, 26, 43, .06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0b0e1a; --surface: #141a2e; --ink: #edf0f8; --ink-soft: #a8b0c6;
+      --ink-faint: #7d859d; --rule: #242c46; --mint: #54d6a0; --mint-soft: #10241d;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 28px rgba(0, 0, 0, .35);
+    }
+  }
+  :root[data-theme="dark"] {
+    --ground: #0b0e1a; --surface: #141a2e; --ink: #edf0f8; --ink-soft: #a8b0c6;
+    --ink-faint: #7d859d; --rule: #242c46; --mint: #54d6a0; --mint-soft: #10241d;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 28px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+  body {
+    background: var(--ground); color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px; line-height: 1.65; margin: 0;
+    padding: clamp(28px, 6vw, 72px) clamp(20px, 5vw, 32px) 80px;
+  }
+  .wrap { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 34px; }
+  header { display: flex; flex-direction: column; gap: 14px; }
+  .eyebrow {
+    font-family: "Outfit", system-ui, sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase; color: var(--mint);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+  h1 {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: clamp(34px, 6vw, 46px); font-weight: 700; line-height: 1.08;
+    letter-spacing: -.02em; margin: 0; text-wrap: balance;
+  }
+  .sub { font-family: "Outfit", system-ui, sans-serif; font-size: 16px; color: var(--ink-faint); margin: 0; max-width: 46ch; }
+
+  .contact {
+    background: var(--surface); border: 1px solid var(--rule); border-radius: 14px;
+    padding: 22px 24px; box-shadow: var(--shadow);
+    display: flex; flex-direction: column; gap: 6px;
+  }
+  .contact .label {
+    font-family: "Outfit", system-ui, sans-serif; font-size: 12px; font-weight: 600;
+    letter-spacing: .1em; text-transform: uppercase; color: var(--ink-faint);
+  }
+  .contact a { font-family: "Outfit", system-ui, sans-serif; font-size: 19px; font-weight: 600; }
+  .contact p { margin: 4px 0 0; color: var(--ink-soft); font-size: 15px; }
+
+  h2 {
+    font-family: "Outfit", system-ui, sans-serif; font-size: 21px; font-weight: 600;
+    letter-spacing: -.01em; margin: 0 0 16px; color: var(--ink);
+  }
+  .faq { display: flex; flex-direction: column; gap: 20px; }
+  .qa { display: flex; flex-direction: column; gap: 6px; }
+  .qa dt { font-family: "Outfit", system-ui, sans-serif; font-weight: 600; font-size: 16px; color: var(--ink); }
+  .qa dd { margin: 0; color: var(--ink-soft); }
+
+  a { color: var(--mint); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 3px; }
+
+  footer {
+    border-top: 1px solid var(--rule); padding-top: 26px;
+    font-family: "Outfit", system-ui, sans-serif; font-size: 14px; color: var(--ink-faint);
+    display: flex; flex-direction: column; gap: 5px;
+  }
+  footer .who { color: var(--ink); font-weight: 600; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Eat Fast Move &middot; Meals, Fasting &amp; Workouts</div>
+    <h1>Support</h1>
+    <p class="sub">Questions, feedback, or something not working right? Here's how to reach us, plus answers to what people ask most.</p>
+  </header>
+
+  <div class="contact">
+    <span class="label">Email support</span>
+    <a href="mailto:bayboyproductions408@gmail.com">bayboyproductions408@gmail.com</a>
+    <p>We read every message and usually reply within a couple of days.</p>
+  </div>
+
+  <section>
+    <h2>Common questions</h2>
+    <dl class="faq">
+      <div class="qa">
+        <dt>Do I need an account to use the app?</dt>
+        <dd>No. There's no sign-up, no login. Everything you log — meals, weight, workouts, fasts — stays on your own device.</dd>
+      </div>
+      <div class="qa">
+        <dt>How do I delete my data?</dt>
+        <dd>Uninstall the app. Since nothing is stored on a server, that removes everything — there's no separate account to close.</dd>
+      </div>
+      <div class="qa">
+        <dt>Why does scanning a photo need an internet connection?</dt>
+        <dd>The photo is sent once to an AI vision service to identify what's on your plate, then the result comes right back — that part can't happen fully offline.</dd>
+      </div>
+      <div class="qa">
+        <dt>The calorie estimate looks off for something I scanned. What do I do?</dt>
+        <dd>Photo scanning is a fast estimate, not a lab measurement — tap any item on the review screen to edit it by hand before saving. For restaurant items, search the restaurant directly for the official nutrition facts instead of scanning.</dd>
+      </div>
+      <div class="qa">
+        <dt>Does the fasting timer work if I close the app?</dt>
+        <dd>Yes. Your fast is timed from when you started it, not while the app is open — close it, lock your phone, come back whenever, and the timer and milestone ring will have kept going.</dd>
+      </div>
+      <div class="qa">
+        <dt>Can I use it without ads?</dt>
+        <dd>The app is free and ad-supported. Ads only appear on browse screens (Calendar, Profile, Workouts) — never on the camera/scan flow, the meal-review screen, or the Fasting timer.</dd>
+      </div>
+    </dl>
+  </section>
+
+  <footer>
+    <span class="who">Bay Boy Productions</span>
+    <span>Eat Fast Move &middot; iOS &amp; Android</span>
+  </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,271 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Eat Fast Move stores your meals, weight, and workouts only on your device. No account. The only network calls are a meal photo to Google's Gemini API, food search text to Open Food Facts, and standard AdMob ad requests.">
+<title>Eat Fast Move Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+
+<style>
+  :root {
+    --ground: #f6f7fb;
+    --surface: #ffffff;
+    --ink: #151a2b;
+    --ink-soft: #4a5268;
+    --ink-faint: #78809a;
+    --rule: #e2e5ee;
+    --mint: #1c8b62;
+    --mint-soft: #eaf6f1;
+    --amber: #a76a12;
+    --amber-soft: #fdf4e4;
+    --shadow: 0 1px 2px rgba(21, 26, 43, .05), 0 8px 28px rgba(21, 26, 43, .06);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --ground: #0b0e1a;
+      --surface: #141a2e;
+      --ink: #edf0f8;
+      --ink-soft: #a8b0c6;
+      --ink-faint: #7d859d;
+      --rule: #242c46;
+      --mint: #54d6a0;
+      --mint-soft: #10241d;
+      --amber: #ffd166;
+      --amber-soft: #241d0f;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 28px rgba(0, 0, 0, .35);
+    }
+  }
+
+  :root[data-theme="dark"] {
+    --ground: #0b0e1a;
+    --surface: #141a2e;
+    --ink: #edf0f8;
+    --ink-soft: #a8b0c6;
+    --ink-faint: #7d859d;
+    --rule: #242c46;
+    --mint: #54d6a0;
+    --mint-soft: #10241d;
+    --amber: #ffd166;
+    --amber-soft: #241d0f;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 28px rgba(0, 0, 0, .35);
+  }
+
+  * { box-sizing: border-box; }
+
+  body {
+    background: var(--ground);
+    color: var(--ink);
+    font-family: "Source Serif 4", Georgia, "Times New Roman", serif;
+    font-size: 17px;
+    line-height: 1.65;
+    margin: 0;
+    padding: clamp(28px, 6vw, 72px) clamp(20px, 5vw, 32px) 80px;
+  }
+
+  .wrap { max-width: 660px; margin: 0 auto; display: flex; flex-direction: column; gap: 34px; }
+
+  header { display: flex; flex-direction: column; gap: 14px; }
+
+  .eyebrow {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 12px; font-weight: 600;
+    letter-spacing: .14em; text-transform: uppercase;
+    color: var(--mint);
+    display: flex; align-items: center; gap: 10px;
+  }
+  .eyebrow::after { content: ""; flex: 1; height: 1px; background: var(--rule); }
+
+  h1 {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: clamp(34px, 6vw, 46px);
+    font-weight: 700; line-height: 1.08;
+    letter-spacing: -.02em;
+    margin: 0; text-wrap: balance;
+  }
+
+  .updated {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 14px; color: var(--ink-faint); margin: 0;
+  }
+
+  .lede {
+    background: var(--mint-soft);
+    border: 1px solid color-mix(in srgb, var(--mint) 26%, transparent);
+    border-radius: 14px;
+    padding: 22px 24px;
+    font-size: 19px; line-height: 1.55;
+    margin: 0;
+  }
+  .lede strong { font-weight: 600; color: var(--mint); }
+
+  h2 {
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 21px; font-weight: 600;
+    letter-spacing: -.01em;
+    margin: 0 0 10px; color: var(--ink);
+  }
+
+  section { display: flex; flex-direction: column; }
+  section + section { border-top: 1px solid var(--rule); padding-top: 30px; }
+
+  p { margin: 0 0 14px; color: var(--ink-soft); }
+  p:last-child { margin-bottom: 0; }
+  strong { color: var(--ink); font-weight: 600; }
+
+  ul { margin: 4px 0 14px; padding-left: 22px; color: var(--ink-soft); display: flex; flex-direction: column; gap: 8px; }
+  ul:last-child { margin-bottom: 0; }
+
+  table { width: 100%; border-collapse: separate; border-spacing: 0; margin: 4px 0 14px; font-size: 15px; }
+  th, td { padding: 9px 10px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--rule); }
+  th { font-family: "Outfit", system-ui, sans-serif; font-weight: 600; font-size: 12px; letter-spacing: .04em; text-transform: uppercase; color: var(--ink-faint); }
+  td { color: var(--ink-soft); }
+  td:last-child, th:last-child { white-space: nowrap; }
+
+  .note {
+    background: var(--amber-soft);
+    border-left: 3px solid var(--amber);
+    border-radius: 0 10px 10px 0;
+    padding: 16px 20px; margin-top: 6px;
+  }
+  .note p { color: var(--ink-soft); margin: 0; font-size: 16px; }
+
+  a { color: var(--mint); text-decoration-thickness: 1px; text-underline-offset: 3px; }
+  a:focus-visible { outline: 2px solid var(--mint); outline-offset: 3px; border-radius: 3px; }
+
+  footer {
+    border-top: 1px solid var(--rule); padding-top: 26px;
+    font-family: "Outfit", system-ui, sans-serif;
+    font-size: 14px; color: var(--ink-faint);
+    display: flex; flex-direction: column; gap: 5px;
+  }
+  footer .who { color: var(--ink); font-weight: 600; font-size: 15px; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Eat Fast Move &middot; Meals, Fasting &amp; Workouts</div>
+    <h1>Privacy Policy</h1>
+    <p class="updated">Effective 9 September 2026</p>
+  </header>
+
+  <p class="lede">
+    Eat Fast Move stores everything you enter &mdash; meals, weight, goals,
+    workouts, fasting sessions &mdash; <strong>only on your own device</strong>.
+    There's no account, no login, and no server of ours your personal data is
+    uploaded to. We don't sell your data or run any analytics or tracking SDK
+    beyond the ad SDK described below.
+  </p>
+
+  <section>
+    <h2>What leaves your device, and why</h2>
+    <p>Three things, each for one specific reason:</p>
+    <table>
+      <thead><tr><th>What</th><th>Sent to</th><th>Why</th></tr></thead>
+      <tbody>
+        <tr><td>A meal photo, when you scan one</td><td>Google Gemini API</td><td>Identify the food and estimate nutrition</td></tr>
+        <tr><td>Food or restaurant search text you type</td><td>Open Food Facts</td><td>Look up nutrition facts for that item</td></tr>
+        <tr><td>Device advertising identifier</td><td>Google AdMob</td><td>Request an ad, and personalize it if you allow tracking</td></tr>
+      </tbody>
+    </table>
+    <p>None of these include your name, profile, meals, weight, goals, or any
+    other data you've entered elsewhere in the app &mdash; each request carries
+    only what it needs to answer that one request.</p>
+  </section>
+
+  <section>
+    <h2>What stays on your device</h2>
+    <p>
+      Your profile, meal logs, weight history, fasting sessions, and workout
+      plans and logged sets all live in the app's own local storage. None of
+      it is backed up to a server we run, because we don't run one.
+      Uninstalling the app deletes all of it &mdash; there's no server copy to
+      separately request deletion of.
+    </p>
+  </section>
+
+  <section>
+    <h2>Third-party services this app calls</h2>
+    <ul>
+      <li><strong>Google Gemini API</strong> (photo &rarr; food identification). Google's
+      own terms govern how they handle that image; on the free tier we
+      currently use, Google may use submitted content to improve their
+      products. See <a href="https://ai.google.dev/gemini-api/terms">Google's Gemini API terms</a>
+      and <a href="https://policies.google.com/privacy">Google's Privacy Policy</a>.</li>
+      <li><strong>Open Food Facts</strong> (openfoodfacts.org) &mdash; a free, open
+      database used to look up nutrition data for packaged and branded foods
+      you search for. Only the search text you type is sent. See
+      <a href="https://world.openfoodfacts.org/privacy">Open Food Facts' privacy policy</a>.</li>
+      <li><strong>Google AdMob</strong> &mdash; displays the ads that keep the app free. See
+      Advertising below.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Advertising</h2>
+    <p>
+      Eat Fast Move is free to download and use, and pays for that through
+      ads shown on a few screens (Calendar, Profile, Workouts) plus,
+      optionally, a short video ad you can choose to watch to unlock extra
+      content &mdash; never a required ad blocking something you already had
+      access to. Ads are never shown on the camera/scan screen, the
+      meal-review screen right after a scan, or the Fasting timer.
+    </p>
+    <p>
+      Ads are served by Google's AdMob, which uses a device advertising
+      identifier (not your name or account &mdash; there is no account) to
+      request ads and, if you allow it, show ones more relevant to you. On
+      iOS, you'll see Apple's standard "Allow Tracking" prompt the first time
+      you open the app &mdash; if you decline, the app still works exactly
+      the same and still shows ads, just without personalization. See
+      <a href="https://support.google.com/admob/answer/6128543">Google's AdMob privacy policy</a>
+      and <a href="https://policies.google.com/technologies/partner-sites">how Google uses data from advertising partners</a>.
+    </p>
+  </section>
+
+  <section>
+    <h2>Permissions this app asks for, and why</h2>
+    <ul>
+      <li><strong>Camera</strong> &mdash; to take a photo of your food for the scan-a-meal feature.</li>
+      <li><strong>Photo library</strong> &mdash; only if you choose "pick from library" instead of taking a new photo.</li>
+    </ul>
+    <p>No location, contacts, microphone, or any other device permission is requested.</p>
+  </section>
+
+  <section>
+    <h2>Children's privacy</h2>
+    <p>This app is not directed at children under 13, and we do not knowingly
+    collect data from children under 13.</p>
+  </section>
+
+  <section>
+    <h2>Changes to this policy</h2>
+    <p>If this policy changes, the "Effective date" above will be updated and
+    the new version posted at the same location. Continued use of the app
+    after a change means you accept the updated policy.</p>
+    <div class="note">
+      <p>Any such change will be described here plainly rather than buried,
+      and the app's store listing will say so too.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Contact</h2>
+    <p>
+      Questions about this policy or your data:
+      <a href="mailto:bayboyproductions408@gmail.com">bayboyproductions408@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    <span class="who">Bay Boy Productions</span>
+    <span>Eat Fast Move &middot; iOS &amp; Android</span>
+  </footer>
+</div>
+</body>
+</html>
